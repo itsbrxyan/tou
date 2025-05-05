@@ -376,26 +376,45 @@
 
   <!-- JavaScript -->
   <script>
-    // Funkcja do rozwijania/zamykania z animacją — tylko jedno otwarte
-    document.querySelectorAll('.character-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const currentContent = header.nextElementSibling;
-        const isOpen = currentContent.classList.contains('open');
-  
-        // Zamknij wszystkie inne
-        document.querySelectorAll('.character-content.open').forEach(content => {
-          content.classList.remove('open');
-          content.style.maxHeight = null;
+    document.addEventListener("DOMContentLoaded", () => {
+      const headers = document.querySelectorAll(".character-header");
+    
+      headers.forEach(header => {
+        header.addEventListener("click", () => {
+          const current = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+    
+          const allContents = document.querySelectorAll(".character-content");
+          const allArrows = document.querySelectorAll(".arrow");
+    
+          // Jeśli kliknięty już otwarty, zamknij go
+          const isOpen = current.classList.contains("open");
+          if (isOpen) {
+            current.style.height = current.scrollHeight + "px";
+            requestAnimationFrame(() => {
+              current.style.height = "0px";
+            });
+            current.classList.remove("open");
+            arrow.classList.remove("open");
+            return;
+          }
+    
+          // Zamknij wszystkie inne
+          allContents.forEach(content => {
+            content.style.height = "0px";
+            content.classList.remove("open");
+          });
+          allArrows.forEach(a => a.classList.remove("open"));
+    
+          // Otwórz ten jeden
+          current.classList.add("open");
+          arrow.classList.add("open");
+          const fullHeight = current.scrollHeight;
+          current.style.height = fullHeight + "px";
         });
-  
-        // Jeśli kliknięty nie był otwarty — otwórz go
-        if (!isOpen) {
-          currentContent.classList.add('open');
-          currentContent.style.maxHeight = currentContent.scrollHeight + "px";
-        }
       });
     });
-  
+    
     // Wyszukiwanie postaci
     document.getElementById('search').addEventListener('input', function () {
       const query = this.value.toLowerCase();
