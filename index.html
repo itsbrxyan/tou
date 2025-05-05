@@ -387,34 +387,41 @@
           const allContents = document.querySelectorAll(".character-content");
           const allArrows = document.querySelectorAll(".arrow");
     
-          // Jeśli kliknięty już otwarty, zamknij go
+          // Sprawdź czy aktualny jest już otwarty
           const isOpen = current.classList.contains("open");
+    
+          allContents.forEach(content => {
+            if (content !== current) {
+              content.style.height = "0px";
+              content.classList.remove("open");
+            }
+          });
+          allArrows.forEach(a => {
+            if (a !== arrow) {
+              a.classList.remove("open");
+            }
+          });
+    
           if (isOpen) {
-            current.style.height = current.scrollHeight + "px";
-            requestAnimationFrame(() => {
-              current.style.height = "0px";
-            });
+            // Zamknij aktualny
+            current.style.height = "0px";
             current.classList.remove("open");
             arrow.classList.remove("open");
-            return;
+          } else {
+            // Otwórz aktualny
+            current.classList.add("open");
+            arrow.classList.add("open");
+    
+            // Musimy poczekać, aż element zyska klasę i przeładować height
+            requestAnimationFrame(() => {
+              const fullHeight = current.scrollHeight;
+              current.style.height = fullHeight + "px";
+            });
           }
-    
-          // Zamknij wszystkie inne
-          allContents.forEach(content => {
-            content.style.height = "0px";
-            content.classList.remove("open");
-          });
-          allArrows.forEach(a => a.classList.remove("open"));
-    
-          // Otwórz ten jeden
-          current.classList.add("open");
-          arrow.classList.add("open");
-          const fullHeight = current.scrollHeight;
-          current.style.height = fullHeight + "px";
         });
       });
     });
-    
+ 
     // Wyszukiwanie postaci
     document.getElementById('search').addEventListener('input', function () {
       const query = this.value.toLowerCase();
