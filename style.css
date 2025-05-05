@@ -1,0 +1,128 @@
+body {
+  background-color: #0f0f1a;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  padding-top: 140px;
+  margin: 0;
+}
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f0f1a;
+    padding: 10px 0 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #333;
+  }
+  
+  #logo {
+    max-width: 200px; /* Zmieniaj tę wartość w zależności od potrzeb */
+    height: auto;
+  }
+  
+  h1 {
+    margin: 0 0 10px;
+  }
+  
+  #search {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #2d2d44;
+    color: white;
+  }
+  
+  .horizontal-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    justify-content: center; /* lub space-between */
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .section-container {
+    width: 300px; /* stała szerokość dla równego rozłożenia */
+    flex-shrink: 0; /* zapobiega ściskaniu sekcji */
+  }
+
+  
+  .section-title {
+    width: 100%;
+    border-bottom: 1px solid #333333;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .character {
+    width: 100%;
+    background-color: #1c1c2b;
+    border-radius: 12px;
+    margin: 10px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .character-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #252538;
+  }
+  
+  .character-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(90deg);
+  }
+  
+  .character-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #2d2d44;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    visibility: visible; /* Dodane: zapewnia widoczność tekstu */
+  }
+  
+  .character-content ul {
+    padding-left: 20px;
+  }
+
+  .character-content li {
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  
