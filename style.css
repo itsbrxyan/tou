@@ -128,9 +128,10 @@ h1 {
 }
 
 /* RESPONSYWNOŚĆ */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .horizontal-sections {
     flex-direction: column;
+    gap: 10px;
     overflow-x: visible;
     padding: 10px;
   }
@@ -138,16 +139,5 @@ h1 {
   .section-container {
     width: 100%;
   }
-
-  #logo {
-    max-width: 150px;
-  }
-
-  #search {
-    width: 95%;
-  }
-
-  .character-title {
-    font-size: 16px;
-  }
 }
+
