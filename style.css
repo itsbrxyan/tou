@@ -43,18 +43,17 @@ h1 {
 
 .horizontal-sections {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Domyślnie sekcje są obok siebie na komputerze */
   justify-content: center; /* Wyśrodkowanie sekcji */
   gap: 20px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
-  overflow-x: auto; /* Włącz przewijanie w poziomie */
 }
 
 .section-container {
   width: 300px; /* Szerokość sekcji */
-  flex-shrink: 0; /* Nie zmienia szerokości */
+  flex-shrink: 0; /* Sekcje nie kurczą się */
 }
 
 .section-title {
@@ -126,32 +125,29 @@ h1 {
 }
 
 /* RESPONSYWNOŚĆ */
+
 @media (max-width: 768px) {
   .horizontal-sections {
-    flex-direction: row; /* Sekcje w jednym rzędzie na telefonach */
-    gap: 10px;
-    overflow-x: auto;
+    flex-direction: column; /* Sekcje ułożone pionowo na telefonach */
+    justify-content: center;
+    gap: 20px;
     padding: 10px;
-    justify-content: center; /* Wyśrodkowanie sekcji */
   }
 
   .section-container {
-    width: 45%; /* Zmniejsz szerokość, aby zmieściły się obok siebie */
+    width: 100%; /* Sekcje zajmują całą szerokość na telefonach */
     max-width: none; /* Usunięcie maksymalnej szerokości */
   }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (min-width: 769px) {
   .horizontal-sections {
-    flex-direction: row; /* Sekcje w jednym rzędzie */
+    flex-direction: row; /* Sekcje obok siebie na komputerach */
+    justify-content: center;
     gap: 20px;
-    overflow-x: auto;
-    padding: 20px;
-    justify-content: flex-start;
   }
 
   .section-container {
-    width: 45%; /* Zmniejsz szerokość sekcji, aby zmieściły się obok siebie */
-    flex-shrink: 1; /* Sekcje mogą się kurczyć */
+    width: 300px; /* Szerokość sekcji na komputerze */
   }
 }
