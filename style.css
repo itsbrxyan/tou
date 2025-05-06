@@ -4,6 +4,7 @@ body {
   color: #fff;
   padding-top: 140px;
   margin: 0;
+  overflow-x: hidden; /* Zapobiega poziomemu przewijaniu */
 }
 
 #header {
@@ -49,11 +50,13 @@ h1 {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  flex-wrap: wrap; /* Pozwala na zawijanie sekcji */
 }
 
 .section-container {
   width: 300px; /* Szerokość sekcji */
-  flex-shrink: 0; /* Sekcje nie kurczą się */
+  flex-shrink: 0;
+  margin-bottom: 20px; /* Dodaje odstęp między sekcjami */
 }
 
 .section-title {
@@ -128,15 +131,18 @@ h1 {
 
 @media (max-width: 768px) {
   .horizontal-sections {
-    flex-direction: column !important; /* Sekcje ustawione pionowo */
+    flex-direction: column !important; /* Ustawienie sekcji pionowo */
     gap: 20px;
     padding: 10px;
     align-items: center; /* Wyśrodkowanie sekcji */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .section-container {
     width: 100%; /* Sekcje zajmują całą szerokość */
-    max-width: 350px; /* Ustalenie maksymalnej szerokości sekcji */
+    max-width: none; /* Usunięcie maksymalnej szerokości */
+    flex-basis: 100%; /* Sekcje zajmują całą dostępną szerokość */
   }
 }
 
@@ -153,15 +159,13 @@ h1 {
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
-  /* Ustawienie sekcji pionowo w orientacji portretowej */
   .horizontal-sections {
-    flex-direction: column !important;
-    gap: 15px;
+    flex-direction: column !important; /* Ustawienie sekcji pionowo */
+    gap: 20px;
     padding: 10px;
   }
 
   .section-container {
     width: 100%; /* Sekcje zajmują całą szerokość na telefonach */
-    max-width: none; /* Usunięcie maksymalnej szerokości */
   }
 }
