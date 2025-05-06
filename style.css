@@ -128,14 +128,15 @@ h1 {
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
   .horizontal-sections {
-    flex-direction: column; /* Ustawienie sekcji w kolumnie na mniejszych ekranach */
+    flex-direction: row; /* Sekcje w jednym rzędzie na telefonach */
     gap: 10px;
-    overflow-x: visible;
+    overflow-x: auto;
     padding: 10px;
+    justify-content: center; /* Wyśrodkowanie sekcji */
   }
 
   .section-container {
-    width: 100%;
+    width: 45%; /* Zmniejsz szerokość, aby zmieściły się obok siebie */
     max-width: none; /* Usunięcie maksymalnej szerokości */
   }
 }
@@ -150,8 +151,7 @@ h1 {
   }
 
   .section-container {
-    width: 100%;
-    max-width: 300px;
+    width: 45%; /* Zmniejsz szerokość sekcji, aby zmieściły się obok siebie */
     flex-shrink: 1; /* Sekcje mogą się kurczyć */
   }
 }
