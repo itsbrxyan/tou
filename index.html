@@ -747,7 +747,21 @@
       character.style.display = "none";
     }
   });
+  
+  if (window.innerWidth <= 768) {
+    const categories = document.querySelectorAll('.category');
+
+    categories.forEach(category => {
+      const visibleCharacters = category.querySelectorAll('.character:not([style*="display: none"])');
+      if (visibleCharacters.length === 0) {
+        category.style.display = "none";
+      } else {
+        category.style.display = "";
+      }
+    });
+  }
 });
+
 </script>
 </body>
 </html>
