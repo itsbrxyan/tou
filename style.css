@@ -147,10 +147,13 @@ h1 {
     gap: 20px;
     overflow-x: auto;
     padding: 20px;
+    justify-content: flex-start;  /* Wyrównanie sekcji do lewej */
+    flex-wrap: wrap;  /* Pozwala na zawijanie sekcji w razie potrzeby */
   }
 
   .section-container {
-    width: 300px;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 300px; /* Maksymalna szerokość dla każdej sekcji */
+    flex-shrink: 1;  /* Umożliwia zmniejszanie się sekcji */
   }
 }
