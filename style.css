@@ -124,17 +124,19 @@ h1 {
   display: none !important;
 }
 
-/* RESPONSYWNOŚĆ */
+/* Responsywność */
 
 @media (max-width: 768px) {
   .horizontal-sections {
-    flex-direction: column; /* Sekcje ustawione pionowo */
+    flex-direction: column !important; /* Sekcje ustawione pionowo */
     gap: 20px;
     padding: 10px;
+    align-items: center; /* Wyśrodkowanie sekcji */
   }
 
   .section-container {
     width: 100%; /* Sekcje zajmują całą szerokość */
+    max-width: 350px; /* Ustalenie maksymalnej szerokości sekcji */
   }
 }
 
@@ -150,24 +152,16 @@ h1 {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
-  /* Jeśli ekran ma szerokość mniejszą niż 1024px w orientacji portretowej */
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Ustawienie sekcji pionowo w orientacji portretowej */
   .horizontal-sections {
-    flex-direction: column; /* Ustawienie sekcji pionowo */
+    flex-direction: column !important;
     gap: 15px;
     padding: 10px;
   }
-}
-
-@media (max-width: 768px) and (orientation: portrait) {
-  /* Poprawki dla ekranów telefonów w orientacji portretowej */
-  .horizontal-sections {
-    flex-direction: column; /* Sekcje ustawione pionowo */
-    gap: 20px;
-    justify-content: center; /* Wyśrodkowanie sekcji */
-  }
 
   .section-container {
-    width: 100%; /* Sekcje mają szerokość 100% */
+    width: 100%; /* Sekcje zajmują całą szerokość na telefonach */
+    max-width: none; /* Usunięcie maksymalnej szerokości */
   }
 }
