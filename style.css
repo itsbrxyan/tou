@@ -44,12 +44,12 @@ h1 {
 .horizontal-sections {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
   overflow-x: auto;
   padding: 20px;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
   width: 100%;
   box-sizing: border-box;
 }
@@ -138,6 +138,7 @@ h1 {
 
   .section-container {
     width: 100%;
+    max-width: none; /* Usunięcie maksymalnej szerokości */
   }
 }
 
@@ -147,13 +148,12 @@ h1 {
     gap: 20px;
     overflow-x: auto;
     padding: 20px;
-    justify-content: flex-start;  /* Wyrównanie sekcji do lewej */
-    flex-wrap: wrap;  /* Pozwala na zawijanie sekcji w razie potrzeby */
+    justify-content: flex-start;
   }
 
   .section-container {
     width: 100%;
-    max-width: 300px; /* Maksymalna szerokość dla każdej sekcji */
-    flex-shrink: 1;  /* Umożliwia zmniejszanie się sekcji */
+    max-width: 300px;
+    flex-shrink: 1;
   }
 }
