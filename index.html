@@ -14,125 +14,763 @@
   </div>
 
   <div class="horizontal-sections">
+
     <div id="crewmate-section" class="section-container">
       <div class="section-title">Crewmate</div>
-      <div id="crewmate-roles"></div>
+
+      <div class="character" data-role="crewmate">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Altruist - Członek załogi, który potrafi wskrzeszać martwych graczy.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Podczas przywracania do życia Altruista nie może się ruszać, a wszyscy zabójcy zostaną skierowani w stronę Altruisty</li>
+            <li>Po upływie określonego czasu ciała wszystkich martwych graczy znajdujących się w zasięgu Altruisty zostaną wskrzeszone, o ile proces wskrzeszania nie zostanie przerwany.</li>
+            <li>Po wykorzystaniu ożywienia Altruista, a także wszyscy ożywieni gracze, nie będą mogli korzystać z przycisków do końca gry.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="character" data-role="crewmate">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Aurial - Członek załogi, który potrafi wyczuwać rzeczy w otaczającej go Aurze.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Jeśli którykolwiek gracz znajdujący się w pobliżu Auriala użyje umiejętności przycisku, na Aurialu pojawi się strzałka wskazująca miejsce użycia tej umiejętności.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="character" data-role="crewmate">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Detective - Członek załogi, który może badać miejsca zbrodni, a następnie badać graczy.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Detektyw musi najpierw znaleźć miejsce zbrodni i je zbadać.</li>
+            <li>Podczas tej samej lub kolejnych rund Detektyw może zbadać graczy, aby sprawdzić, czy to oni byli zabójcami.
+              Jeśli badany gracz jest zabójcą lub znajdował się w pobliżu miejsca zbrodni w dowolnym momencie, otrzyma czerwony błysk, w przeciwnym razie błysk będzie zielony.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Engineer - Członek załogi, który może naprawiać sabotaże z dowolnego miejsca na mapie.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+             <li>Mogą korzystać z otworów wentylacyjnych, aby łatwo przemieszczać się po mapie.</li>
+             <li>Posiadają oni 5 naprawień na każdą grę</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Haunter - Martwy członek załogi może ujawnić oszustów, jeśli wykonają wszystkie swoje zadania.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+             <li>Po wykonaniu wszystkich swoich zadań impostorzy ujawniają się żywym członkom załogi po zwołaniu spotkania.</li>
+             <li>Jednakże, jeśli klikniemy na Hauntera, traci on zdolność ujawniania impostorów i znów staje się normalnym duchem.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Imitator - Członek załogi potrafiący udawać role zmarłych członków załogi.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Podczas spotkań Imitator może wybrać, kogo role będzie naśladował w kolejnej rundzie.</li>
+              <li>Mogą wykorzystać role każdego martwego gracza tyle razy, ile chcą.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Investigator - Członek załogi, który widzi ślady stóp graczy.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <LI>Każdy ślad znika po upływie określonego czasu.</LI>
+              <li>Jego zadaniem jest wykorzystanie zdobytych odcisków stóp do pomocy członkom załogi.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Jailor - Członek załogi, który może aresztować członków załogi.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Podczas spotkań wszyscy gracze mogą zobaczyć, kiedy członek załogi zostaje uwięziony.</li>
+              <li>Kiedy ktoś zostaje uwięziony, nie może korzystać ze zdolności do spotkań i żadna zdolność do spotkań nie może być wobec niego użyta.</li>
+              <li>Może komunikować się prywatnie z więźniem.</li>
+              <li>Jeśli strażnik uzna, że ​​więzień jest zły, może go stracić.</li>
+              <li>Jeżeli strażnik straci dobrą rolę, traci możliwość uwięzienia.</li>
+            </ul>
+          </div>
+        </div>    
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Medic - Członek załogi, który może dać każdemu graczowi tarczę, dzięki której będzie on nieśmiertelny, dopóki nie zginie Medyk.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Gracz chroniony tarczą nie może zostać zabity przez nikogo, chyba że popełni samobójstwo.</li>
+              <li>Jeśli Medyk zgłosi znalezienie zwłok, może otrzymać raport zawierający wskazówki co do tożsamości Zabójcy.</li>
+              <li>Jeśli ciało nie jest zbyt stare, raport może zawierać informacje na temat rodzaju koloru (ciemny/jasny) zabójcy.</li>
+            </ul>
+          </div>
+        </div>    
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Medium - Członek załogi, który potrafi widzieć duchy.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>W każdej rundzie Medium ma umiejętność zwaną Medytacją.</li>
+              <li>Jeśli Medium użyje tej zdolności gdy nikt nie zginie, nic się nie stanie.</li>
+              <li>Jeśli jednak ktoś nie żyje, Medium i martwy gracz będą widzieli siebie nawzajem za pomocą strzałki.</li>
+              <li>Zadaniem martwego gracza, jest wskazanie Medium kto go zabił.</li>
+            </ul>
+          </div>
+        </div>  
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Mystic - Członek załogi, który otrzymuje powiadomienie informujące o czyjejś śmierci.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Mystic na chwilę widzi strzałkę wskazującą kierunek ciała.</li>
+            </ul>
+          </div>
+        </div>  
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Oracle - Członek załogi, który może nakłonić innego gracza do wyznania mu pewnych informacji.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Oracle ma 2 umiejętności.</li>
+              <li>Pierwsza z nich, „wyznanie”, polega na tym, że gracz przyznaje się, że jeden z dwóch graczy lub obaj są źli.</li>
+              <li>Drugie, błogosławieństwo, czyni kogoś odpornym na śmierć w trakcie spotkania.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Prosecutor - Członek załogi, który raz na grę może ścigać gracza, co skutkuje jego wygnaniem w danym momencie.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Prokurator może również przeglądać głosy nieanonimowo.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Seer - Członek załogi, który może ujawnić zamiary innych graczy.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Może dowiedzieć się, czy gracz pełni rolę Dobrą czy Złą.</li>
+              <li>Nazwa gracza zmieni kolor w zależności od typu roli.</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Sheriff - Członek załogi, który ma możliwość eliminowania oszustów za pomocą przycisku zabijania.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Jeśli jednak zabiją członka załogi lub neutralnego gracza, którego nie mogą zabić, sami giną.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Snitch - Członek załogi, który może odbierać strzałki wskazujące na oszustów po wykonaniu wszystkich ich zadań.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Imiona oszustów również będą wyświetlane na ekranie w kolorze czerwonym.</li>
+              <li>Jednak gdy zostało im już tylko jedno zadanie, Impostorzy otrzymują strzałkę wskazującą na lokalizację Snitcha.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Spy - Członek załogi, który uzyskuje więcej informacji, gdy znajduje się przy stole administracyjnym.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+             <li>W tabeli administracyjnej szpieg może zobaczyć kolory każdej osoby na mapie.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Swapper - Członek załogi, który może zamieniać głosy między 2 graczami w czasie spotkania.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+             <li>Wszystkie głosy oddane na pierwszego gracza zostaną zaliczone na głosy drugiego gracza i odwrotnie.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Transporter - Członek załogi, który może według własnej woli zmieniać lokalizację dwóch losowych graczy.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+             <li>Gracze, którzy zostali przeniesieni, są powiadamiani za pomocą niebieskiego błysku na ekranie.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Veteran - Członek załogi, który może być w stanie gotowości.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Kiedy Weteran jest w stanie gotowości, każdy, niezależnie od tego, czy jest członkiem załogi, osobą neutralną czy oszustem, jeśli wejdzie z nim w interakcję, ginie.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="character" data-role="crewmate">
+          <div class="character-header" onclick="toggleContent(this)">
+            <div class="character-title">Vigilante - Członek załogi, który może zabić podczas spotkań.</div>
+            <div class="arrow">▶</div>
+          </div>
+          <div class="character-content">
+            <ul>
+              <li>Podczas spotkań Strażnik może zdecydować się na zabicie kogoś, odgadując jego rolę. Jeśli jednak odgadnie niepoprawnie, sam umrze.</li>
+            </ul>
+          </div>
+        </div>      
     </div>
 
     <div id="neutral-section" class="section-container">
       <div class="section-title">Neutral</div>
-      <div id="neutral-roles"></div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Amnesiac - Rola neutralna, bez warunków wygranej.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Nie ma żadnych zadań i w zasadzie nie odgrywa żadnej roli.</li>
+            <li>Mogą jednak zabrać rolę, znajdując martwego gracza.</li>
+            <li>Gdy już zabiorą rolę, próbują wygrać, stosując się do nowych warunków zwycięstwa.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Arsonist - Rola neutralna z własnymi warunkami zwycięstwa.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Ma dwie umiejętności. Pierwsza z nich polega na oblewaniu innych graczy benzyną.</li>
+            <li>Drugim sposobem jest podpalenie wszystkich oblanych benzyną graczy znajdujących się w pobliżu.</li>
+            <li>Arsonista musi być ostatnim żyjącym zabójcą, aby wygrać grę.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Executioner - Rola neutralna z własnymi warunkami zwycięstwa.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Jego celem jest wyrzucenie gracza, którego nazwa widnieje na początku gry.</li>
+            <li>Jeśli gracz zostanie wyrzucony, wygrywa grę.</li>
+            <li>Lecz jeżeli wyznaczony gracz zginie, Executioner zamienia się w Jestera</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Glitch - Rola neutralna z własnymi warunkami zwycięstwa.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Celem Glitcha jest zabicie wszystkich i pozostanie ostatnią żywą osobą</li>
+            <li>Glitch może hackować graczy, uniemożliwiając im zgłaszanie ciał i korzystanie ze zdolności.</li>
+            <li>Hakowanie uniemożliwia zhakowanemu graczowi wykonywanie jakichkolwiek czynności poza poruszaniem się po mapie.</li>
+            <li>Glitch może kogoś naśladować, co powoduje, że wygląda on dokładnie tak samo jak druga osoba przez 10 sekund.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Guardian Angel - Rola neutralna, zgodna z osobą bronioną, do której należy cel.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+           <li>Ich zadaniem jest ochrona celu za wszelką cenę.</li>
+           <li>Jeżeli ich cel przegra, oni przegrają.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Jester - Rola neutralna z własnym warunkiem wygranej.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+           <li>Jeśli zostaną wyrzuceni po spotkaniu, gra się kończy, a oni wygrywają.</li>
+           <li>Jednakże Jester nie wygrywa, jeśli wygrywają Członkowie załogi, Impostorzy lub inna neutralna rola</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Juggernaut - rola neutralną z własnym warunkiem wygranej.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+           <li>Specjalną umiejętnością Juggernauta jest to, że jego czas odnowienia zabójstwa zmniejsza się z każdym zabójstwem.</li>
+           <li>Oznacza to, że teoretycznie Juggernaut może mieć czas odnowienia zabójstwa wynoszący 0 sekund!</li>
+           <li>Juggernaut musi być ostatnim żywym zabójcą, aby wygrać grę.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Phantom - Rola neutralna z własnymi warunkami zwycięstwa.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+           <li>Po śmierci stają się półniewidzialni i muszą wykonać wszystkie swoje zadania, nie dając się złapać.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Plaguebearer - Rola neutralna z własnymi warunkami zwycięstwa, a także możliwością transformacji w inną rolę.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+           <li>Ma jedną umiejętność, która pozwala mu zarażać innych graczy.</li>
+           <li>Po zarażeniu gracz może zarażać innych graczy, wchodząc z nimi w interakcję.</li>
+           <li>Gdy wszyscy gracze zostaną zarażeni, Plaguebearer staje się Pestilence.</li>
+           <li>Pestilence to niezniszczalna siła, którą można zabić tylko poprzez wyrzucenie. Nawet śmierć ich lovera ich nie zabije.</li>
+           <li>Aby wygrać grę, ostatnim żyjącym zabójcą musi być Plaguebearer lub Pestilence.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="character" data-role="neutral">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Survivor - Rola neutralna, można wygrać po prostu przez przetrwanie.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>Survivor posiada kamizelki których może użyć gdy poczuje niebezpieczeństwo</li>
+            <li>Chronią one go przed śmiercią, jednakże Survivor nie wie kiedy powinien użyć kamizelki.</li>
+            <li>Gracz posiadający rolę Survivora decyduje kiedy użyć kamizelki na podstawie swojej intuicji.</li>
+            <li>Jeśli jednak wygrają Loversi lub Neutralni Zabijający, Survivor przegrywa.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div id="impostor-section" class="section-container">
       <div class="section-title">Impostor</div>
-      <div id="impostor-roles"></div>
+
+      <div class="character" data-role="impostor">
+        <div class="character-header" onclick="toggleContent(this)">
+          <div class="character-title">Blackmailer - Potrafi uciszyć ludzi na spotkaniach.</div>
+          <div class="arrow">▶</div>
+        </div>
+        <div class="character-content">
+          <ul>
+            <li>W każdej rundzie Blackmailer może podejść do kogoś i go szantażować.</li>
+            <li>Dzięki temu osoba szantażowana nie będzie mogła zabrać głosu i głosować podczas kolejnego spotkania.</li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="character" data-role="impostor">
+      <div class="character-header" onclick="toggleContent(this)">
+        <div class="character-title">Bomber - Potrafi podkładać bomby zamiast zabijać.</div>
+        <div class="arrow">▶</div>
+      </div>
+      <div class="character-content">
+        <ul>
+          <li>Po podłożeniu bomby nastąpi jej detonacja po upływie 5 sekund.</li>
+          <li>Po wybuchu bomby wszyscy członkowie załogi (oraz impostorzy!) znajdujący się w promieniu eksplozji zostaną zabici.</li>
+        </ul>
+      </div>
     </div>
 
-    <div id="modifiers-section" class="section-container">
-      <div class="section-title">Modifiers</div>
-      <div id="modifier-roles"></div>
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Escapist - Potrafi teleportować się w inne miejsce.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Raz na rundę Escapist może oznaczyć miejsce, do którego może uciec później w tej rundzie.</li>
+      </ul>
     </div>
   </div>
 
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Grenadier - Potrafi rzucać granatami dymnymi.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>W trakcie gry Grenadier ma możliwość rzucenia granatu dymnego, który oślepia członków załogi, uniemożliwiając im zobaczenie czegokolwiek.</li>
+        <li>Jednakże sabotaż i granat dymny nie mogą być aktywne w tym samym czasie.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Janitor - Potrafi sprzątać ciała.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Zarówno umiejętność Kill, jak i Clean mają wspólny cooldown co oznacza, że ​​gracz musi wybrać, której z nich chce użyć.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Miner - Potrafi tworzyć nowe otwory wentylacyjne.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Otwory te łączą się ze sobą, tworząc nowe przejście.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Morphling - Potrafi przemienić się w innego gracza.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Na początku gry i po każdym spotkaniu gracze mogą wybrać osobę, którą chcą naśladować.</li>
+        <li>Następnie mogą w dowolnym momencie i przez 10 sekund przekształcić się w tę osobę.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Scavenger - Impostor, który poluje na ofiary.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Z każdym udanym zabójstwem Scavenger ma skrócony cooldown zabójstwa.</li>
+        <li>W przypadku nieudanego zabójstwa, Scavenger będzie miał znacznie wydłużony czas odnowienia zabójstwa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Swooper - Potrafi stać się tymczasowo niewidzialny.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Po użyciu swojej umiejętności staje się niewidzialny przez 10 sekund</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Traitor - Jeśli wszyscy Impostorzy zginą przed pewnym momentem w grze, losowo wybrany członek załogi zostanie zdrajcą.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Zdrajca nie posiada żadnych dodatkowych zdolności, a jego zadaniem jest po prostu pomszczenie zabitych Oszustów.</li>
+        <li>Kiedy gracz ten staje się zdrajcą, jego sojusznikiem są Impostorzy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Undertaker - Potrafi przeciągać i upuszczać ciała.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Potrafi przenosić ciała martwych członków załogi</li>
+        <li>Po zabójstwie można wykorzystać jego umiejętność do przeniesienia ciała, w mniej zauważalne miejsce</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Venerer - Zdobywa zdolności poprzez zabijanie.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Po pierwszym zabiciu Venerer może się zakamuflować.</li>
+        <li>Po drugim zabiciu Venerer może biec sprintem.</li>
+        <li>Po trzecim zabiciu wszyscy pozostali gracze zostają spowolnieni, gdy ich umiejętność pozostaje aktywna.</li>
+        <li>Wszystkie umiejętności aktywowane są za pomocą jednego przycisku i mają taki sam czas trwania.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Warlock - Potrafi ładować swój przycisk zabijania.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Po aktywacji Warlock może używać przycisku zabijania w nieskończoność, aż do wyczerpania baterii.</li>
+        <li>Jednakże nie muszą w pełni naładować przycisku zabijania, aby z niego skorzystać.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!-- MODYFIKATORY -->
+<div id="modifiers-section" class="section-container">
+  <div class="section-title">Modifiers</div>
+
+  <div class="character" data-role="modifier">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Bait - Zabicie Baita sprawia, że ​​zabójca automatycznie zgłasza ciało</div>
+    </div>  
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Disperser - Impostor, który posiada umiejętność jednorazowego użycia, pozwalającą wysłać wszystkich graczy do losowego otworu wentylacyjnego.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Dotyczy to również otworów wentylacyjnych stworzonych przez Minera.</li>
+        <li>Nie pojawia się na mapach Airship i Submerged.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Double Shot - Impostor, który zdobywa dodatkowe życie za dokonanie zabójstwa.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Po wykorzystaniu swojego życia zostają oznaczeni czerwonym błyskiem i nie mogą już zgadnąć osoby, którą źle odgadli, do końca spotkania.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="modifier">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Flash - Porusza się z większą prędkością niż normalny gracz.</div>
+    </div>  
+  </div>
+
+  <div class="character" data-role="modifier">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Giant - Gigantyczny członek załogi, który ma zmniejszoną prędkość chodzenia.</div>
+    </div>  
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Lovers - Kochankowie to dwaj gracze, którzy są ze sobą powiązani.</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Ci dwaj gracze są wybierani losowo spośród członków załogi i impostorów.</li>
+        <li>Osiągają główny cel to wspólne przetrwanie.</li>
+        <li>Jeżeli obydwaj znajdą się wśród trzech ostatnich graczy, wygrywają.</li>
+        <li>Aby to zrobić, uzyskują dostęp do prywatnego czatu.</li>
+        <li>Mogą jednak wygrać także ze swoją drużyną, stąd Kochankowie nie znają roli drugiego kochanka.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="character" data-role="modifier">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Mini - Malutki członek załogi.</div>
+    </div>  
+  </div>
+
+  <div class="character" data-role="modifier">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Shy - Staje się przezroczysty, gdy przez chwilę stoi nieruchomo.</div>
+    </div>  
+  </div>
+
+  <div class="character" data-role="impostor">
+    <div class="character-header" onclick="toggleContent(this)">
+      <div class="character-title">Underdog - Impostor z wydłużonym czasem odnowienia umiejętności zabijającej..</div>
+      <div class="arrow">▶</div>
+    </div>
+    <div class="character-content">
+      <ul>
+        <li>Gdy będą jedynymi żywymi oszustami, czas odnowienia ich umiejętności zabicia zostanie skrócony.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
   <script>
-    async function loadRoles() {
-      const res = await fetch('characters.json');
-      const rolesData = await res.json();
-
-      for (const type in rolesData) {
-        const container = document.getElementById(`${type}-roles`);
-        rolesData[type].forEach(role => {
-          const character = document.createElement("div");
-          character.classList.add("character");
-          character.setAttribute("data-role", type);
-
-          const header = document.createElement("div");
-          header.classList.add("character-header");
-          header.onclick = () => toggleContent(header);
-
-          const title = document.createElement("div");
-          title.classList.add("character-title");
-          title.textContent = `${role.name} - ${role.desc}`;
-
-          const arrow = document.createElement("div");
-          arrow.classList.add("arrow");
-          arrow.textContent = "▶";
-
-          header.appendChild(title);
-          if (role.details.length > 0) header.appendChild(arrow);
-          character.appendChild(header);
-
-          if (role.details.length > 0) {
-            const content = document.createElement("div");
-            content.classList.add("character-content");
-            const ul = document.createElement("ul");
-            role.details.forEach(detail => {
-              const li = document.createElement("li");
-              li.textContent = detail;
-              ul.appendChild(li);
-            });
-            content.appendChild(ul);
-            character.appendChild(content);
-          }
-
-          container.appendChild(character);
-        });
-      }
-    }
-
-    function toggleContent(header) {
-      const current = header.nextElementSibling;
-      const arrow = header.querySelector(".arrow");
-      const allContents = document.querySelectorAll(".character-content");
-      const allArrows = document.querySelectorAll(".arrow");
-      const isOpen = current && current.classList.contains("open");
-
-      allContents.forEach(content => {
-        if (content !== current) {
-          content.style.height = "0px";
-          content.classList.remove("open");
-        }
-      });
-      allArrows.forEach(a => {
-        if (a !== arrow) a.classList.remove("open");
-      });
-
-      if (current) {
-        if (isOpen) {
-          current.style.height = "0px";
-          current.classList.remove("open");
-          arrow.classList.remove("open");
-        } else {
-          current.classList.add("open");
-          arrow.classList.add("open");
-          requestAnimationFrame(() => {
-            current.style.height = current.scrollHeight + "px";
-          });
-        }
-      }
-    }
-
     document.addEventListener("DOMContentLoaded", () => {
-      loadRoles();
-      const searchInput = document.getElementById('search');
-      searchInput.addEventListener('input', () => {
-        const query = searchInput.value.toLowerCase();
-        const characters = document.querySelectorAll('.character');
-        characters.forEach(character => {
-          const titleElement = character.querySelector('.character-title');
-          if (!titleElement) return;
-          const namePart = titleElement.textContent.split("-")[0].trim().toLowerCase();
-          character.style.display = namePart.startsWith(query) ? "" : "none";
-        });
-        if (window.innerWidth <= 768) {
-          document.querySelectorAll('.section-container').forEach(section => {
-            const visibleCharacters = section.querySelectorAll('.character:not([style*="display: none"])');
-            section.style.display = visibleCharacters.length === 0 ? "none" : "";
+      const headers = document.querySelectorAll(".character-header");
+    
+      headers.forEach(header => {
+        header.addEventListener("click", () => {
+          const current = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+    
+          const allContents = document.querySelectorAll(".character-content");
+          const allArrows = document.querySelectorAll(".arrow");
+    
+          const isOpen = current.classList.contains("open");
+    
+          allContents.forEach(content => {
+            if (content !== current) {
+              content.style.height = "0px";
+              content.classList.remove("open");
+            }
           });
-        }
+          allArrows.forEach(a => {
+            if (a !== arrow) {
+              a.classList.remove("open");
+            }
+          });
+    
+          if (isOpen) {
+            current.style.height = "0px";
+            current.classList.remove("open");
+            arrow.classList.remove("open");
+          } else {
+            current.classList.add("open");
+            arrow.classList.add("open");
+    
+            requestAnimationFrame(() => {
+              const fullHeight = current.scrollHeight;
+              current.style.height = fullHeight + "px";
+            });
+          }
+        });
       });
     });
-  </script>
+ 
+    document.getElementById('search').addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  const characters = document.querySelectorAll('.character');
+
+  characters.forEach(character => {
+    const titleElement = character.querySelector('.character-title');
+    if (!titleElement) return;
+
+    const fullTitle = titleElement.textContent.toLowerCase();
+    const namePart = fullTitle.split("-")[0].trim();
+
+    if (namePart.startsWith(query)) {
+      character.style.display = "";
+    } else {
+      character.style.display = "none";
+    }
+  });
+
+  if (window.innerWidth <= 768) {
+    const sections = document.querySelectorAll('.section-container');
+
+    sections.forEach(section => {
+      const visibleCharacters = section.querySelectorAll('.character:not([style*="display: none"])');
+      if (visibleCharacters.length === 0) {
+        section.style.display = "none";
+      } else {
+        section.style.display = "";
+      }
+    });
+  }
+});
+
+</script>
 </body>
 </html>
