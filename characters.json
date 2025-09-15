@@ -1,0 +1,45 @@
+{
+  "crewmate": [
+    {
+      "name": "Altruist ",
+      "desc": "Członek załogi, który potrafi wskrzeszać martwych graczy.",
+      "details": [
+        "Podczas przywracania do życia Altruista nie może się ruszać, a wszyscy zabójcy zostaną skierowani w stronę Altruisty",
+        "Po upływie określonego czasu ciała wszystkich martwych graczy znajdujących się w zasięgu Altruisty zostaną wskrzeszone, o ile proces wskrzeszania nie zostanie przerwany.",
+        "Po wykorzystaniu ożywienia Altruista, a także wszyscy ożywieni gracze, nie będą mogli korzystać z przycisków do końca gry."
+      ]
+    },
+    {
+      "name": "Nazwa roli",
+      "desc": "Krótki opis roli.",
+      "details": [
+        "Szczegół 1",
+        "Szczegół 2",
+        "Szczegół 3"
+      ]
+    }    
+  ],
+  "neutral": [
+    {
+      "name": "Nazwa roli",
+      "desc": "Krótki opis roli neutralnej.",
+      "details": [
+        "Szczegół 1"
+      ]
+    }
+  ],
+  "impostor": [
+    {
+      "name": "Nazwa roli",
+      "desc": "Krótki opis roli impostora.",
+      "details": []
+    }
+  ],
+  "modifier": [
+    {
+      "name": "Nazwa moda",
+      "desc": "Krótki opis moda.",
+      "details": []
+    }
+  ]
+}
